@@ -16,4 +16,8 @@ model User {
   id        String   @id @default(uuid())
   name      String
   email     String   @unique
+  imageUrl  String?
+  clerkId   String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
